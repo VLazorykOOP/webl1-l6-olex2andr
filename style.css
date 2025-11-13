@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f4f7f6;
+    line-height: 1.6;
+}
+
+a {
+    color: #6a11cb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2575fc;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    color: #6a11cb;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; border-bottom: 2px solid #f0eaff; padding-bottom: 0.5rem; }
+h3 { font-size: 1.5em; color: #2575fc; }
+
+.header {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #fff;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 1.5rem;
+}
+
+.main-nav a {
+    color: #ffffff;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    border-bottom-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.footer {
+    background-color: #1e1e2f;
+    color: #aaa;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.news-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.articles-column {
+    flex: 3;
+    min-width: 300px;
+}
+
+.news-article {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2.5rem;
+}
+
+.news-article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.article-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    margin: -2rem -2rem 1.5rem -2rem;
+}
+
+.post-date {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #6a11cb;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+}
+
+.read-more-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #6a11cb;
+}
+
+.sidebar {
+    flex: 1;
+    min-width: 280px;
+    position: sticky;
+    top: 2rem;
+}
+
+.widget {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+}
+
+.code-snippet {
+    background-color: #2d2d2d;
+    color: #f1f1f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+}
+.code-keyword { color: #569cd6; }
+.code-func { color: #dcdcaa; }
+.code-comment { color: #6a9955; }
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.category-list a {
+    background-color: #f0eaff;
+    color: #6a11cb;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.category-list a:hover {
+    background-color: #6a11cb;
+    color: #ffffff;
+}
+
+ol, ul, dl {
+    padding-left: 2rem;
+}
+li, dd {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+dt {
+    font-weight: 600;
+    color: #2575fc;
+    margin-top: 1rem;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.product-catalog {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.product-catalog caption {
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 1rem;
+    caption-side: bottom;
+    color: #555;
+}
+
+.product-catalog th, .product-catalog td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #f0eaff;
+}
+
+.product-catalog thead {
+    background: #6a11cb;
+    color: white;
+}
+
+.product-catalog tbody tr:nth-child(even) {
+    background-color: #f8f7fc;
+}
+
+.product-catalog tbody tr:hover {
+    background-color: #f0eaff;
+}
+
+.product-catalog tfoot {
+    background: #f4f7f6;
+    font-weight: 600;
+    border-top: 2px solid #6a11cb;
+}
+
+.variant-table {
+    width: 100%;
+    height: 600px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.variant-table td {
+    border: 2px solid #2575fc;
+    background: #f0eaff;
+    padding: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.9em;
+}
+
+input[type="email"],
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type="checkbox"] {
+    accent-color: #6a11cb;
+    margin-right: 0.5rem;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background: #6a11cb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #2575fc;
+}
+
+/* ================================================= */
+/* СТИЛІ ДЛЯ ІНТЕРАКТИВНОЇ НАВІГАЦІЇ (index.html)   */
+/* ================================================= */
+.navigation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.nav-grid-item {
+    display: block;
+    padding: 2rem 1.5rem;
+    background-color: #f8f7fc;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #f0eaff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#site-navigation.is-visible .nav-grid-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ОНОВЛЕНО: Затримка анімації тепер для 6 карток */
+#site-navigation.is-visible .nav-grid-item:nth-child(1) { transition-delay: 0.1s; }
+#site-navigation.is-visible .nav-grid-item:nth-child(2) { transition-delay: 0.2s; }
+#site-navigation.is-visible .nav-grid-item:nth-child(3) { transition-delay: 0.3s; }
+#site-navigation.is-visible .nav-grid-item:nth-child(4) { transition-delay: 0.4s; }
+#site-navigation.is-visible .nav-grid-item:nth-child(5) { transition-delay: 0.5s; }
+#site-navigation.is-visible .nav-grid-item:nth-child(6) { transition-delay: 0.6s; }
+
+
+.nav-grid-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.nav-grid-item .icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.nav-grid-item h3 {
+    color: #6a11cb;
+    margin-bottom: 0.5rem;
+}
+
+.nav-grid-item p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.4;
+}
+
+.form-container {
+    font-family: 'Lucida Sans', 'Lucida Sans Unicode', 'Arial Narrow', sans-serif;
+    font-weight: 200;
+    font-stretch: normal;
+}
+
+.form-container h2 {
+    font-family: fantasy;
+    font-weight: 800;
+    font-variant: small-caps;
+    text-shadow: #6a11cb 2px 2px 5px;
+    letter-spacing: 2px;
+}
+
+.product-form fieldset {
+    border: 2px groove #6a11cb;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.product-form legend {
+    font: message-box;
+    font-weight: 600;
+    font-style: normal;
+    padding: 0 10px;
+    color: #2575fc;
+}
+
+.form-field {
+    margin-bottom: 1.25rem;
+}
+
+.form-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    font-stretch: semi-expanded;
+}
+
+.form-field input[type="text"],
+.form-field input[type="tel"],
+.form-field input[type="number"],
+.form-field textarea,
+.form-field select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-size: 16px;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px #6a11cbe0;
+    outline: none;
+}
+
+.form-field-inline {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-stretch: extra-condensed;
+}
+.form-field-inline label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: none;
+}
+.form-field-inline input {
+    width: auto;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
+    word-spacing: 10px;
+}
+
+.form-actions button,
+.form-actions input[type="submit"],
+.form-actions input[type="reset"],
+.form-actions input[type="button"] {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background: #6a11cb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-actions input[type="reset"] {
+    background-color: #777;
+}
+
+.form-actions input[type="submit"][formnovalidate] {
+    background-color: #e67e22;
+}
+
+.form-actions button:hover,
+.form-actions input[type="submit"]:hover,
+.form-actions input[type="reset"]:hover,
+.form-actions input[type="button"]:hover {
+    background-color: #2575fc;
+}
+.form-actions input[type="reset"]:hover {
+    background-color: #555;
+}
+.form-actions input[type="submit"][formnovalidate]:hover {
+    background-color: #d35400;
+}
+
+@media print {
+    body {
+        size: portrait;
+        page: auto;
+    }
+    
+    .card, .form-field {
+        page-break-inside: avoid;
+    }
+    
+    @page {
+        marks: cross;
+    }
+    
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+}
+
+@media speech {
+    h1, h2 {
+        volume: x-loud;
+        speech-rate: x-slow;
+        pitch: x-low;
+        pitch-range: 40;
+        cue-before: url("beep.mp3");
+        pause-after: 200ms;
+    }
+    
+    .product-form {
+        speak-punctuation: code;
+        speak-numeral: continuous;
+    }
+    
+    .form-field label {
+        volume: medium;
+        speech-rate: x-fast;
+        azimuth: center-right;
+        elevation: lower;
+        richness: 80;
+    }
+    
+    .form-actions {
+        play-during: url("music.mp3") mix repeat;
+        pause-before: 500ms;
+    }
+}
+
+.svg-container {
+    width: 100%;
+    background-color: #f8f7fc;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+#static-drawing svg {
+    background-color: #ffffff;
+}
+#static-drawing ellipse,
+#static-drawing circle,
+#static-drawing rect {
+    fill: #2575fc;
+    stroke: #1e1e2f;
+    stroke-width: 0.1px;
+}
+#static-drawing text {
+    font-size: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    fill: #333;
+}
+#static-drawing line {
+    stroke-width: 0.1px;
+}
+#static-drawing defs path {
+    fill: black;
+}
+
+#text-path svg {
+    height: 100px;
+}
+#text-path path {
+    fill: none;
+    stroke: #ddd;
+    stroke-dasharray: 4px 2px;
+}
+#text-path text {
+    font-size: 10px;
+    font-weight: 600;
+    fill: #6a11cb;
+}
+
+.animation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.animation-cell {
+    background: #f8f7fc;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding-bottom: 1rem;
+    overflow: hidden;
+}
+.animation-cell h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+    padding: 1rem 1rem 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    background: #f0eaff;
+}
+.animation-cell svg {
+    width: 80%;
+    height: 100px;
+    fill: #6a11cb;
+}
