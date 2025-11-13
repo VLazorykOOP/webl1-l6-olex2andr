@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог та структура - КіберСвіт</title>
+    <meta name="author" content="Ісак Олександр">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="header-logo">КіберСвіт</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="company.html">Про фірму</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="lists.html">Послуги</a></li>
+                <li><a href="tables.html" class="active">Каталог</a></li>
+                <li><a href="forms.html">Форми</a></li>
+                <li><a href="svg.html">SVG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section class="card">
+            <h2>Детальний каталог компонентів</h2>
+            <div class="table-responsive">
+                
+                <table title="Каталог продукції" lang="uk-UA" class="product-catalog" id="main-catalog-table" frame="box" cellpadding="10" cellspacing="5">
+                    
+                    <caption id="table_caption" title="Опис таблиці">
+                        Список доступних процесорів та відеокарт на 05.11.2025
+                    </caption>
+                    
+                    <colgroup>
+                        <col id="col_category" style="width: 20%; background-color: #f8f7fc;">
+                        <col id="col_model" style="width: 30%;">
+                        <col id="col_specs" style="width: 35%;">
+                        <col id="col_price" style="width: 15%;" span="1" charoff="2">
+                    </colgroup>
+
+                    <thead id="table_head">
+                        <tr>
+                            <th id="th_category" class="header-category" abbr="Кат." colspan="1">Категорія</th>
+                            <th id="th_model">Модель</th>
+                            <th id="th_specs">Специфікація</th>
+                            <th id="th_price">Ціна (грн)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="table_body">
+                        <tr>
+                            <td rowspan="2" valign="bottom" style="background-color: #eee;" title="Категорія товарів">Процесори</td>
+                            <td lang="en">Intel Core i9-14900K</td>
+                            <td lang="en">24 ядра (8P+16E), 32 потоки, до 6.0 GHz</td>
+                            <td id="price-cell-1" class="numeric-data" valign="middle" char=".">25 500</td>
+                        </tr>
+                        <tr>
+                            <td lang="en">AMD Ryzen 9 7950X</td>
+                            <td lang="en">16 ядер, 32 потоки, до 5.7 GHz</td>
+                            <td id="price-cell-2" align="right" valign="top">23 100</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Відеокарти</td>
+                            <td lang="en">NVIDIA RTX 4080</td>
+                            <td lang="en">16 GB GDDR6X, 9728 CUDA Cores</td>
+                            <td>52 000</td>
+                        </tr>
+                        <tr>
+                            <td lang="en">AMD Radeon RX 7900 XTX</td>
+                            <td lang="en">24 GB GDDR6, 6144 Stream Processors</td>
+                            <td>48 500</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot id="table_foot">
+                        <tr>
+                            <td colspan="3" style="text-align: right;">Всього позицій на складі:</td>
+                            <td id="total-count" style="font-weight: bold; color: green;">128</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Специфікація ноутбуків (Варіант №25)</h2>
+            
+            <table class="variant-table" title="Структура згідно варіанту №25" style="border-color: red;" dir="ltr" align="center" width="90%">
+                <tbody>
+                    <tr>
+                        <td rowspan="3">Ігрові</td>
+                        <td colspan="4">Модель A ("Gaming Beast")</td>
+                        <td rowspan="2">Екран</td>
+                        <td colspan="3">17.3" QHD 240Hz</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">CPU</td>
+                        <td colspan="2">Intel</td>
+                        <td>Core i9</td>
+                        <td colspan="3">16:9, IPS</td>
+                    </tr>
+                    <tr>
+                        <td>AMD</td>
+                        <td>Ryzen 9</td>
+                        <td>GPU</td>
+                        <td>RTX 4080</td>
+                        <td>RAM</td>
+                        <td>32GB</td>
+                        <td>SSD 2TB</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Ультрабуки</td>
+                        <td>Модель B</td>
+                        <td rowspan="2">CPU</td>
+                        <td colspan="3">Intel Core i7</td>
+                        <td rowspan="2">Екран</td>
+                        <td>14"</td>
+                        <td>OLED</td>
+                    </tr>
+                    <tr>
+                        <td>Модель C</td>
+                        <td colspan="3">Intel Core i5</td>
+                        <td>13.3"</td>
+                        <td>IPS</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>16GB</td>
+                        <td colspan="3">Графіка</td>
+                        <td>Intel Iris Xe</td>
+                        <td>Вага</td>
+                        <td>1.2 кг</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Робочі станції</td>
+                        <td colspan="2">Модель D</td>
+                        <td rowspan="3">CPU</td>
+                        <td colspan="2">Xeon W</td>
+                        <td rowspan="2">GPU</td>
+                        <td colspan="2">NVIDIA RTX A4000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Модель E</td>
+                        <td colspan="2">Ryzen Threadripper</td>
+                        <td colspan="2">NVIDIA RTX A2000</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td colspan="2">64GB ECC</td>
+                        <td>Пам'ять</td>
+                        <td colspan="2">4TB NVMe RAID</td>
+                        <td rowspan="2">Порти</td>
+                        <td rowspan="2">Thunderbolt 4</td>
+                    </tr>
+                    <tr>
+                        <td>Ціна (A)</td>
+                        <td colspan="2">95 000 грн</td>
+                        <td>Ціна (B)</td>
+                        <td colspan="3">42 000 грн</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 КіберСвіт. Всі права захищено.</p>
+    </footer>
+
+</body>
+</html>
