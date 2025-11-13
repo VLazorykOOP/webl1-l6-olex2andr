@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Про фірму "КіберСвіт"</title>
+    <meta name="author" content="Ісак Олександр">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="header-logo">КіберСвіт</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="company.html" class="active">Про фірму</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section class="card">
+            <h2 id="catalog-title">Наша місія та асортимент</h2>
+            
+            <a href="map-handler.php">
+                <img src="logo.png" alt="Логотип фірми" 
+                     width="150" 
+                     hspace="10" 
+                     vspace="10" 
+                     ismap 
+                     usemap="#firmmap">
+            </a>
+            <map name="firmmap">
+                <area shape="rect" coords="0,0,150,150" href="index.html" alt="На головну">
+            </map>
+            
+            <p class="description">
+                <dfn id="firm-name" title="Назва нашої компанії">"КіберСвіт"</dfn> - це ваш надійний партнер у світі високих технологій. Ми пропонуємо найкращі комп'ютерні рішення для роботи, ігор та творчості. 
+                Наша мета - <q title="Місія компанії" id="mission-quote" class="quote">зробити потужні технології доступними для кожного</q>.
+            </p>
+            <p>
+                Ми ретельно підбираємо компоненти для кожної збірки, щоб гарантувати максимальну продуктивність та надійність.
+            </p>
+            
+            <p>
+                Як сказав засновник Apple: 
+                <cite lang="en" class="citation">"Design is not just what it looks like and feels like. Design is how it works."</cite>
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Наші комп'ютери</h2>
+            
+            <pre lang="uk" class="config-example">
+                Приклад конфігурації "Gaming Beast":
+                ===================================
+                CPU: AMD Ryzen 7 7800X3D
+                GPU: NVIDIA RTX 4060 Ti
+                RAM: 32 GB DDR5
+            </pre>
+            
+            <div class="table-responsive">
+                <table title="Каталог продукції" lang="uk-UA" class="product-catalog">
+                    <thead>
+                        <tr>
+                            <th id="th_model">Назва комп’ютера</th>
+                            <th id="th_cpu">Виробник процесора</th>
+                            <th id="th_ghz">Тактова частота</th>
+                            <th id="th_gpu">Відеокарта</th>
+                            <th id="th_ram">
+                                Обсяг <abbr title="Оперативна пам'ять" id="ram-abbr">ОП</abbr>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td lang="en">Office Standard</td>
+                            <td lang="en">Intel</td>
+                            <td lang="en">3.6 GHz</td>
+                            <td lang="en">
+                                <code class="gpu-model" lang="en-US">Intel UHD Graphics 730</code>
+                            </td>
+                            <td lang="uk">16 ГБ</td>
+                        </tr>
+                        <tr>
+                            <td lang="en">Gaming Beast</td>
+                            <td lang="en">AMD</td>
+                            <td lang="en">4.7 GHz</td>
+                            <td lang="en">NVIDIA RTX 3060 Ti</td>
+                            <td lang="uk">32 ГБ</td>
+                        </tr>
+                        <tr>
+                            <td lang="en">Creator's Workstation</td>
+                            <td lang="en">Intel</td>
+                            <td lang="en">5.2 GHz</td>
+                            <td lang="en">NVIDIA RTX 3080</td>
+                            <td lang="uk">64 ГБ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <address style="text-align: center; font-style: normal;" dir="ltr">
+            Зв'яжіться з нами: info@cybersvit.ua
+        </address>
+        
+        <p>&copy; 2025 КіберСвіт. Всі права захищено.</p>
+    </footer>
+
+</body>
+</html>
