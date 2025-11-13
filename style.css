@@ -279,6 +279,10 @@ dt {
     border-bottom: 1px solid #172A45;
 }
 
+.videocards, .cpus {
+    background: rgb(7, 46, 105); 
+}
+
 .product-catalog thead {
     background: #FF6B6B;
     color: #0A192F;
