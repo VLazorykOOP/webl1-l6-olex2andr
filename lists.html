@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Послуги та компоненти - КіберСвіт</title>
+    <meta name="author" content="Ісак Олександр">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="header-logo">КіберСвіт</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="company.html">Про фірму</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="lists.html" class="active">Послуги</a></li>
+                <li><a href="tables.html">Каталог</a></li>
+                <li><a href="forms.html">Форми</a></li>
+                <li><a href="svg.html">SVG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section class="card" id="services">
+            <h2>Етапи підбору ідеального ПК</h2>
+            <ol class="guide-list" type="1" start="1">
+                <li title="Визначення бюджету" lang="uk">Визначення бюджету та основних завдань.</li>
+                <li>Підбір центрального процесора (CPU) та материнської плати.</li>
+                <li value="3">Вибір відеокарти (GPU) для ігор або професійної роботи.</li>
+                <li>Підбір оперативної пам'яті (RAM) та накопичувача (SSD/HDD).</li>
+            </ol>
+        </section>
+
+        <section class="card" id="products">
+            <h2>Наші ключові послуги</h2>
+            <ul id="services-list" type="circle">
+                <li>Професійна збірка комп'ютерів на замовлення.</li>
+                <li>Діагностика та ремонт комп'ютерної техніки.</li>
+                <li>
+                    Модернізація (апгрейд) вашого ПК:
+                    <ul type="square" style="margin-top: 1rem;">
+                        <li>Заміна процесора та відеокарти</li>
+                        <li>Збільшення обсягу RAM</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <article class="card">
+            <h2>Глосарій компонентів</h2>
+            <dl id="component-definitions" class="definitions">
+                <dt id="cpu-term" dir="ltr">CPU (Центральний процесор)</dt>
+                <dd>Мозок комп'ютера, що виконує більшість обчислень.</dd>
+                <dt id="gpu-term" dir="ltr">GPU (Графічний процесор)</dt>
+                <dd>Спеціалізований процесор для обробки графіки та відео.</dd>
+            </dl>
+        </article>
+
+        <div class="card" id="sub-block">
+            <label for="newsletter-check">
+                <input type="checkbox" id="newsletter-check" class="custom-checkbox" checked>
+                <span class="checkbox-label">Підписатись на оновлення</span>
+            </label>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p title="Контактна інформація">
+            "КіберСвіт" - ваш провідник у світі технологій. &copy; 2025
+        </p>
+    </footer>
+
+</body>
+</html>
