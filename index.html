@@ -1,61 +1,109 @@
 <!DOCTYPE html>
 <html lang="uk">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сторінка автора - КіберСвіт</title>
     <meta name="author" content="Ісак Олександр">
-    <title>Сторінка автора</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
     <header class="header">
         <a href="index.html" class="header-logo">КіберСвіт</a>
         <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Головна</a></li>
+                <li><a href="index.html" class="active">Головна</a></li>
                 <li><a href="company.html">Про фірму</a></li>
-                <li><a href="news.html" class="active">Новини</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="lists.html">Послуги</a></li>
+                <li><a href="tables.html">Каталог</a></li>
+                <li><a href="forms.html">Форми</a></li>
+                <li><a href="svg.html">SVG</a></li>
             </ul>
         </nav>
-
-        <h3 style="font-family: 'Times New Roman', serif; color: #444;" dir="auto" align="center">
-            Про автора веб-проекту
-        </h3>
     </header>
 
-    <main>
-        <h4 align="left" style="text-decoration: underline;" title="Привітання від автора">
-            Вітаю!
-        </h4>
+    <main class="container">
+        
+        <section class="card hero">
+            <h1 title="Головний заголовок">Про автора веб-проекту</h1>
+            <p dir="ltr">
+                Вітаю! Мене звати <b title="Олександр" class="author-name">Олександр</b>. Я є розробником цього навчального веб-сайту. Проект створено для демонстрації навичок роботи з HTML та CSS.
+            </p>
+            <p dir="ltr" style="font-style: italic;">
+                Тема мого проекту — віртуальна фірма "КіберСвіт", що спеціалізується на продажі комп'ютерної техніки.
+            </p>
+        </section>
 
-        <p style="background-color: #f0f0f0; padding: 10px;" dir="ltr" align="left">
-            Мене звати
-            <strike id="author-name" title="Ім'я автора" lang="uk-UA">Ісак Олександр</strike>.
-            Я є розробником цього навчального веб-проекту.
-        </p>
+        <section class="card" id="site-navigation">
+            <h2 style="text-align: center;">Швидкий перехід</h2>
+            
+            <div class="navigation-grid">
+                
+                <a href="company.html" class="nav-grid-item">
+                    <span class="icon">🏢</span>
+                    <h3>Про фірму</h3>
+                    <p>Наша місія, команда та історія.</p>
+                </a>
+                
+                <a href="news.html" class="nav-grid-item">
+                    <span class="icon">📰</span>
+                    <h3>Новини</h3>
+                    <p>Останні оновлення, акції та статті.</p>
+                </a>
+                
+                <a href="lists.html" class="nav-grid-item">
+                    <span class="icon">🛠️</span>
+                    <h3>Послуги</h3>
+                    <p>Етапи підбору ПК та глосарій.</p>
+                </a>
+                
+                <a href="tables.html" class="nav-grid-item">
+                    <span class="icon">💻</span>
+                    <h3>Каталог</h3>
+                    <p>Детальні специфікації товарів.</p>
+                </a>
 
-        <s dir="ltr" class="project-theme" style="color: #555; font-style: italic;">
-            Тема мого проекту — віртуальна фірма "КіберСвіт", що спеціалізується на продажі комп’ютерної техніки.
-        </s>
+                <a href="forms.html" class="nav-grid-item">
+                    <span class="icon">📝</span>
+                    <h3>Форми</h3>
+                    <p>Введення даних та нові товари.</p>
+                </a>
 
-        <h5 title="Інформація про сторінку" align="right" id="page-info">
-            Ця сторінка створена для демонстрації навичок HTML.
-        </h5>
+                <a href="svg.html" class="nav-grid-item">
+                    <span class="icon">🎨</span>
+                    <h3>SVG</h3>
+                    <p>Статична та динамічна графіка.</p>
+                </a>
 
-        <br title="Розрив рядка" class="hidden-break" style="display: none;">
-
-        <hr width="75%" size="3" align="center">
-
-        <nav>
-            <p>Перейти до <a href="company.html">інформація про фірму</a>.</p>
-        </nav>
-    </main>
+            </div>
+        </section>
+        </main>
 
     <footer class="footer">
         <p>&copy; 2025 КіберСвіт. Всі права захищено.</p>
     </footer>
 
-</body>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navSection = document.querySelector('#site-navigation');
+            
+            if (navSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            navSection.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                });
+                
+                observer.observe(navSection);
+            }
+        });
+    </script>
+    </body>
 </html>
