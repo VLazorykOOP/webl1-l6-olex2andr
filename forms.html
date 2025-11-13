@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форми - КіберСвіт</title>
+    <meta name="author" content="Ісак Олександр">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="header-logo">КіберСвіт</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="company.html">Про фірму</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="lists.html">Послуги</a></li>
+                <li><a href="tables.html">Каталог</a></li>
+                <li><a href="forms.html" class="active">Форми</a></li>
+                <li><a href="svg.html">SVG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section class="card form-container">
+            <h2>Реєстрація нового продукту</h2>
+            <p>Заповніть форму для додавання нового товару до каталогу.</p>
+
+            <form id="product-form" 
+                  class="product-form"
+                  lang="uk"
+                  autocomplete="on"
+                  enctype="multipart/form-data" 
+                  accept-charset="UTF-8"
+                  action="#"
+                  method="get"
+                  onsubmit="alert('Форму перевірено на клієнті!'); return false;">
+
+                <fieldset class="form-fieldset" title="Основні дані" style="border-color: #6a11cb;">
+                    <legend>Основні дані про товар</legend>
+
+                    <div class="form-field">
+                        <label for="product-name">Назва продукту:</label>
+                        <input type="text" id="product-name" name="product_name" 
+                               autofocus 
+                               required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="serial-number">Серійний номер (з dirname):</label>
+                        <input type="text" id="serial-number" name="serial_number" dirname="sn_dir">
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="contact-phone">Телефон підтримки:</label>
+                        <input type="tel" id="contact-phone" name="contact_phone" placeholder="+380 (XX) XXX-XX-XX">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="cpu-list">Виробник (зі списком):</label>
+                        <input type="text" id="cpu-list" name="cpu_list" list="cpu-datalist">
+                        <datalist id="cpu-datalist" class="vendor-list" style="display: none;" lang="en">
+                            <option value="Intel"></option>
+                            <option value="AMD"></option>
+                            <option value="Apple"></option>
+                        </datalist>
+                    </div>
+                    
+                </fieldset>
+
+                <fieldset class="form-fieldset" title="Деталі">
+                    <legend>Деталі та комплектація</legend>
+
+                    <div class="form-field">
+                        <label for="category-select">Категорія (можна обрати декілька):</label>
+                        <select id="category-select" name="category" required size="4" multiple>
+                            <option id="opt1" style="color: blue;" label="PC">Комп'ютери</option>
+                            <option id="opt2" style="color: grey;" label="Laptop" disabled>Ноутбуки (Недоступно)</option>
+                            <option id="opt3" label="Monitor">Монітори</option>
+                            <option id="opt4" label="Peripherals">Периферія</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field form-field-inline">
+                        <span>Тип:</span>
+                        <label><input type="radio" name="product_type" value="new" checked> Новий</label>
+                        <label><input type="radio" name="product_type" value="used"> Вживаний</label>
+                    </div>
+
+                    <div class="form-field form-field-inline">
+                        <span>Опції:</span>
+                        <label><input type="checkbox" name="options" value="warranty"> Гарантія</label>
+                        <label><input type="checkbox" name="options" value="giftbox"> Подарункова упаковка</label>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="description">Короткий опис (wrap="hard"):</label>
+                        <textarea id="description" name="description"
+                                  wrap="hard" 
+                                  style="resize: vertical; background: #fff;"
+                                  placeholder="Опис товару..." 
+                                  cols="80"></textarea>
+                    </div>
+
+                     <div class="form-field">
+                        <label for="notes">Нотатки (вимкнено):</label>
+                        <textarea id="notes" name="notes" disabled>Це поле вимкнене</textarea>
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="form-fieldset" title="Показники">
+                    <legend>Показники</legend>
+
+                    <div class="form-field">
+                        <label for="stock-progress">Заповненість складу:</label>
+                        <progress id="stock-progress" value="75" max="100"></progress> 75%
+                    </div>
+
+                    <div class="form-field">
+                        <label for="reliability-meter">Рейтинг надійності (High=0.8):</label>
+                        <meter id="reliability-meter" class="rating-bar" style="width: 100%;"
+                               dir="ltr"
+                               min="0" max="1" low="0.2" high="0.8" optimum="1"
+                               value="0.9">
+                            0.9 з 1
+                        </meter>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="quantity">Кількість (Max 100):</label>
+                        <input type="number" id="quantity" name="quantity" min="0" max="100" value="10">
+                    </div>
+
+                    <details>
+                        <summary class="details-summary" title="Натисніть для деталей" dir="auto">
+                            Додаткова інформація
+                        </summary>
+                        <p>Тут можна розмістити приховану інформацію про товар.</p>
+                    </details>
+                </fieldset>
+                
+                <fieldset class="form-fieldset" title="Файли">
+                    <legend>Файли</legend>
+                    
+                    <div class="form-field">
+                        <label for="product-image">Завантажити фото</label>
+                        <input type="file" id="product-image" name="product_image" 
+                               accept="image/*" 
+                               multiple>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label>Відправити як зображення (alt, height, width):</label>
+                        <input type="image" id="image-submit" name="image_submit"
+                               src="https://placehold.co/100x50/6a11cb/ffffff?text=Send" 
+                               alt="Надіслати як картинку"
+                               height="50"
+                               width="100"
+                               lang="en">
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <input type="reset" value="Скинути форму">
+                    
+                    <button type="submit" 
+                            name="main_submit" 
+                            value="submit_v1" 
+                            form="product-form"
+                            formenctype="application/x-www-form-urlencoded">
+                        Відправити
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 КіберСвіт. Всі права захищено.</p>
+    </footer>
+
+</body>
+</html>
