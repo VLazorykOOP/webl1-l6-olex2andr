@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <title>Послуги та компоненти - КіберСвіт</title>
     <meta name="author" content="Ісак Олександр">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <link media="print" charset="utf-8" sizes="32x32" style="display: none;" title="Print Styles" href="print.css">
 </head>
+
 <body>
 
     <header class="header">
         <a href="index.html" class="header-logo">КіберСвіт</a>
+
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Головна</a></li>
@@ -24,12 +29,19 @@
         </nav>
     </header>
 
+
     <main class="container">
-        
+
+        <marquee id="promo-marquee-top" class="promo-runner" bgcolor="#172A45" scrolldelay="200" truespeed
+            direction="right" style="color: #00F5D4; padding: 5px; margin-bottom: 1rem; border-radius: 5px;">
+            Тільки сьогодні! Нова послуга - кастомізація корпусу!
+        </marquee>
+
         <section class="card" id="services">
             <h2>Етапи підбору ідеального ПК</h2>
-            <ol class="guide-list" type="1" start="1">
-                <li title="Визначення бюджету" lang="uk">Визначення бюджету та основних завдань.</li>
+
+            <ol class="guide-list" type="1" start="1" compact style="border: 1px solid #172A45; padding-top: 10px;">
+                <li start="1" type="A" title="Визначення бюджету" lang="uk">Визначення бюджету та основних завдань.</li>
                 <li>Підбір центрального процесора (CPU) та материнської плати.</li>
                 <li value="3">Вибір відеокарти (GPU) для ігор або професійної роботи.</li>
                 <li>Підбір оперативної пам'яті (RAM) та накопичувача (SSD/HDD).</li>
@@ -38,7 +50,8 @@
 
         <section class="card" id="products">
             <h2>Наші ключові послуги</h2>
-            <ul id="services-list" type="circle">
+
+            <ul id="services-list" type="circle" value="5">
                 <li>Професійна збірка комп'ютерів на замовлення.</li>
                 <li>Діагностика та ремонт комп'ютерної техніки.</li>
                 <li>
@@ -53,12 +66,25 @@
 
         <article class="card">
             <h2>Глосарій компонентів</h2>
-            <dl id="component-definitions" class="definitions">
-                <dt id="cpu-term" dir="ltr">CPU (Центральний процесор)</dt>
-                <dd>Мозок комп'ютера, що виконує більшість обчислень.</dd>
-                <dt id="gpu-term" dir="ltr">GPU (Графічний процесор)</dt>
+
+            <dl id="component-definitions" dir="ltr">
+                <dt class="term-title" id="cpu-term" style="color: #FF6B6B;">CPU (Центральний процесор)</dt>
+                <dd>Мозок комп'ютера, що виконує більшість обчислень. Наприклад: <bdi id="bdi-intel">Intel</bdi> або
+                    AMD.</dd>
+
+                <dt class="term-title" id="gpu-term" style="color: #FF6B6B;">GPU (Графічний процесор)</dt>
                 <dd>Спеціалізований процесор для обробки графіки та відео.</dd>
+
+                <dt class="term-title" id="ram-term" style="color: #FF6B6B;">RAM (Оперативна пам'ять)</dt>
+                <dd>Тимчасова пам'ять для швидкого доступу до даних.</dd>
             </dl>
+
+            <dir title="Old List Style" class="deprecated-dir"
+                style="margin-top: 20px; border: 1px dashed #8892B0; padding: 10px;">
+                <li>Це застарілий список DIR.</li>
+                <li>Додано новий елемент для демонстрації.</li>
+                <li>Ще один елемент списку.</li>
+            </dir>
         </article>
 
         <div class="card" id="sub-block">
@@ -66,14 +92,36 @@
                 <input type="checkbox" id="newsletter-check" class="custom-checkbox" checked>
                 <span class="checkbox-label">Підписатись на оновлення</span>
             </label>
+
+            <command style="display: none;" checked>Застарілий тег command</command>
         </div>
     </main>
 
     <footer class="footer">
+
+        <marquee id="promo-marquee-bottom" class="promo-runner" bgcolor="#07111F" scrolldelay="100" truespeed
+            direction="left">
+            Нові надходження відеокарт! Знижки до 20% на SSD!
+        </marquee>
+
+        <nav class="footer-nav" style="padding: 20px 0; text-align: center;">
+            <ul id="footer-links" type="circle" value="1">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="company.html">Про фірму</a></li>
+                <li><a href="news.html">Новини</a></li>
+            </ul>
+        </nav>
+
         <p title="Контактна інформація">
             "КіберСвіт" - ваш провідник у світі технологій. &copy; 2025
         </p>
+
+        <a href="manual.txt" download="CyberSvit_Manual.txt" rel="external" target="_blank" accesskey="m"
+            rev="document" style="color: #FF6B6B;">
+            Завантажити посібник
+        </a>
     </footer>
 
 </body>
+
 </html>
