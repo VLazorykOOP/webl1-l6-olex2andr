@@ -276,3 +276,32 @@ function runTask5() {
 
     document.getElementById('task5Result').innerHTML = outputHTML;
 }
+
+function runTask6() {
+    n = parseInt(document.getElementById('arraySize').value);
+    if (isNaN(n) || n < 1) n = 10; 
+
+    output = "";
+
+    A = [];
+    for(i = 0; i < n; i++) {
+        A.push(-(Math.floor(Math.random() * 100) + 1));
+    }
+    
+    output += `Згенерований масив від'ємних чисел:\n[ ${A.join(', ')} ]\n\n`;
+
+    maxNegative = A[0]; 
+    maxNegativeIndex = 0;
+
+    for (i = 1; i < A.length; i++) {
+        if (A[i] > maxNegative) {
+            maxNegative = A[i];
+            maxNegativeIndex = i;
+        }
+    }
+
+    output += `Максимальний елемент: ${maxNegative}\n`;
+    output += `Індекс: ${maxNegativeIndex}`;
+
+    document.getElementById('task6Output').value = output;
+}

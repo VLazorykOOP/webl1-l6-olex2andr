@@ -37,7 +37,7 @@
         </section>
 
         <section class="lab-task">
-            <h3>Завдання 5 (Пошук regex)</h3>
+            <h3>Завдання 5 (regex)</h3>
             <p>Введіть текст для аналізу (слова на "а...а" і цілі числа):</p>
             <form name="searchForm">
                 <textarea id="regexInput">Якийсь текст</textarea>
@@ -45,7 +45,23 @@
             </form>
             <div id="task5Result" class="result-box">...</div>
         </section>
-        
+
+        <section class="lab-task">
+            <h3>Завдання 6 (Масиви)</h3>
+            <p>Генерується масив A з N випадкових чисел.</p>
+            <ul style="margin-bottom: 15px; color: #E6F1FF;">
+                <li>6.2. Знайти максимальний серед від'ємних елементів та його індекс.</li>
+            </ul>
+            <form name="arrayForm">
+                <label style="color: #00F5D4;">Введіть N (розмір масиву): 
+                    <input type="number" id="arraySize" value="15" style="width: 80px; padding: 5px;">
+                </label>
+                <button type="button" class="lab-btn" onclick="runTask6()">Array Task</button>
+                <br>
+                <label for="task6Output">Результат обробки:</label>
+                <textarea id="task6Output" readonly style="height: 180px;" placeholder="..."></textarea>
+            </form>
+        </section>
         <hr style="margin: 30px 0;">
 
         <div class="news-layout">
