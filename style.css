@@ -839,3 +839,23 @@ canvas {
     box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
     margin-top: 15px;
 }
+
+audio, video {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0, 245, 212, 0.2);
+}
+
+video {
+    background: #000;
+    border: 1px solid #172A45;
+}
+
+#checkVideoResult {
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00F5D4;
+    font-weight: bold;
+}

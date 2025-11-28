@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Медіа-бібліотека - КіберСвіт</title>
+    <meta name="author" content="Ісак Олександр">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="header-logo">КіберСвіт</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="company.html">Про фірму</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="lists.html">Послуги</a></li>
+                <li><a href="media.html" class="active">Медіа</a></li> 
+                <li><a href="tables.html">Каталог</a></li>
+                <li><a href="forms.html">Форми</a></li>
+                <li><a href="svg.html">SVG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="gradient-text">Медіа-бібліотека</h1>
+
+        <section class="card">
+            <h2><span style="color: #FF6B6B;">♫</span> Аудіо архів</h2>
+            
+            <form name="audioForm">
+                <div class="form-field">
+                    <label for="audioSelect">Список відтворення:</label>
+                    <select id="audioSelect" onchange="setAudio()">
+                        <option value="tw3geralt.mp3">The Witcher 3 - Geralt Of Rivia</option>
+                        <option value="tw3silver.mp3">The Witcher 3 - Silver for Monsters</option>
+                        <option value="tw3sword.mp3">The Witcher 3 - Sword of Destiny</option>
+                    </select>
+                </div>
+            </form>
+
+            <div id="audioContainer">
+                <audio id="myAudio" controls>
+                    <source src="" type="audio/mpeg">
+                    Ваш браузер не підтримує аудіо елемент.
+                </audio>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2><span style="color: #00F5D4;">▶</span> Відео колекція</h2>
+
+            <form name="videoForm">
+                <div class="form-field">
+                    <label for="videoSelect">Обрати відео:</label>
+                    <select id="videoSelect" onchange="setVideo()">
+                        <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">Big Buck Bunny (Cartoon)</option>
+                        <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4">Elephants Dream (Sci-Fi)</option>
+                        <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">For Bigger Blazes (Promo)</option>
+                    </select>
+                </div>
+            </form>
+
+            <div id="videoContainer">
+                <video id="myVideo" controls>
+                    <source src="" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section class="lab-task">
+            <h3>Системна діагностика</h3>
+            <button class="lab-btn" onclick="checkVideoSupport()">Перевірити кодеки</button>
+            <div id="checkVideoResult">...</div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 КіберСвіт. Всі права захищено.</p>
+    </footer>
+
+    <script src="media.js"></script>
+</body>
+</html>
